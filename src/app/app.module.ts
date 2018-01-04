@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import {MatCardModule, MatListModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import {CharacterListComponent} from './character-list.component';
-
 
 @NgModule({
   declarations: [
@@ -12,7 +10,9 @@ import {CharacterListComponent} from './character-list.component';
     CharacterListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
