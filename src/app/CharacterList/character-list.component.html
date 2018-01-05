@@ -1,8 +1,11 @@
 
 <h2>Character List Component</h2>
+
+<input [(ngModel)] = "filterBy" />
+
 <mat-card>
   <mat-list>
-    <mat-list-item *ngFor= "let character of characters">
+    <mat-list-item *ngFor= "let character of characters | characterFilter : filterBy">
       <img mat-list-avatar [src]="character.avatar">
         {{character.name | uppercase}}
     </mat-list-item>
